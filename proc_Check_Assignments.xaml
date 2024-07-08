@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2655,1669</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2655,1635</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>proc_Check_Assignments_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,27 +112,27 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="proc_Check_Assignments" sap:VirtualizedContainerService.HintSize="1678,1604" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="proc_Check_Assignments" sap:VirtualizedContainerService.HintSize="1678,1570" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Home" sap:VirtualizedContainerService.HintSize="1616,1493" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="29da5aa1-63f8-4cc6-8fdc-a1d002e963ee" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Home" sap:VirtualizedContainerService.HintSize="1616,1459" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="29da5aa1-63f8-4cc6-8fdc-a1d002e963ee" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1582,1276" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1582,1242" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Welcome back,'" sap:VirtualizedContainerService.HintSize="1520,1163" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="29da5aa1-63f8-4cc6-8fdc-a1d002e963ee" Timeout="3" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Welcome back,'" sap:VirtualizedContainerService.HintSize="1520,1127" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="29da5aa1-63f8-4cc6-8fdc-a1d002e963ee" Timeout="3" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1016,906" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1016,910" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -140,25 +140,19 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="proc_Telegram_API - Send message.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="954,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="proc_Telegram_API - Send message.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">
-                        <Literal x:TypeArguments="x:String">Login success</Literal>
-                      </InArgument>
-                      <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">
-                        <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="in_api" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_token">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_token" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">Login success</InArgument>
+                      <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">[in_api]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_token">[in_token]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Assignments'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="29da5aa1-63f8-4cc6-8fdc-a1d002e963ee" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="3cc20beb-684e-4cc4-8fe9-935956c0dc61" CvTextArea="1466, 416, 105, 19" CvTextArgument="Assignments" CvType="Text" DesignTimeRectangle="1468, 414, 103, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Assignments'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;h5' idx='2' tag='H5' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='title' tag='H5' aaname='Assignments' check:innerText='Assignments' /&gt;" Guid="51d7f5ef-9f83-4e54-98a8-47d84bda2bad" InformativeScreenshot="f4870026d8a6989389cb7067e18b18f2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="3cc20beb-684e-4cc4-8fe9-935956c0dc61" CvTextArea="1466, 416, 105, 19" CvTextArgument="Assignments" CvType="Text" DesignTimeRectangle="1468, 414, 103, 22" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Assignments'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;h5' idx='2' tag='H5' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='title' tag='H5' aaname='Assignments' check:innerText='Assignments' /&gt;" Guid="51d7f5ef-9f83-4e54-98a8-47d84bda2bad" InformativeScreenshot="f4870026d8a6989389cb7067e18b18f2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State 'To view'" sap:VirtualizedContainerService.HintSize="954,443" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="29da5aa1-63f8-4cc6-8fdc-a1d002e963ee" Timeout="3" Version="V3">
+                  <uix:NCheckState DisplayName="Check App State 'To view'" sap:VirtualizedContainerService.HintSize="954,445" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="29da5aa1-63f8-4cc6-8fdc-a1d002e963ee" Timeout="3" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -166,21 +160,15 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="proc_Telegram_API - Send message.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="proc_Telegram_API - Send message.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">
-                              <Literal x:TypeArguments="x:String">No homework</Literal>
-                            </InArgument>
-                            <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">
-                              <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="in_api" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_token">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_token" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">No homework</InArgument>
+                            <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">[in_api]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_token">[in_token]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -188,27 +176,21 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="proc_Telegram_API - Send message.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="proc_Telegram_API - Send message.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">
-                              <Literal x:TypeArguments="x:String">There are unfinished assignment(s)</Literal>
-                            </InArgument>
-                            <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">
-                              <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="in_api" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_token">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_token" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">There are unfinished assignment(s)</InArgument>
+                            <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">[in_api]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_token">[in_token]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="35e3be16-3d83-4acc-801c-242536155cfb" CvTextArea="1319, 986, 384, 18" CvTextArgument="To view more assignments, go to your Assignments" CvType="Text" DesignTimeRectangle="1320, 983, 382, 22" DesignTimeScaleFactor="1" FriendlyName="'To view'" FullSelectorArgument="&lt;webctrl class='sub' parentid='main-content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='sub' parentid='main-content' tag='SPAN' type='' aaname='To view more assignments, go to your ' check:innerText='To view more assignments, go to your Assignments' /&gt;" Guid="6875b29f-5574-455c-8041-efa1007f7eba" InformativeScreenshot="18fa5eee06f015012e2dd6b2f5208bda.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="35e3be16-3d83-4acc-801c-242536155cfb" CvTextArea="1319, 986, 384, 18" CvTextArgument="To view more assignments, go to your Assignments" CvType="Text" DesignTimeRectangle="1320, 983, 382, 22" DesignTimeScaleFactor="1" FriendlyName="'To view'" FullSelectorArgument="&lt;webctrl class='sub' parentid='main-content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='sub' parentid='main-content' tag='SPAN' type='' aaname='To view more assignments, go to your ' check:innerText='To view more assignments, go to your Assignments' /&gt;" Guid="6875b29f-5574-455c-8041-efa1007f7eba" InformativeScreenshot="18fa5eee06f015012e2dd6b2f5208bda.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
                     </uix:NCheckState.Target>
                   </uix:NCheckState>
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,356" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,358" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -216,22 +198,16 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="proc_Telegram_API - Send message.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="proc_Telegram_API - Send message.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">
-                        <Literal x:TypeArguments="x:String">Login fail</Literal>
-                      </InArgument>
-                      <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">
-                        <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="in_api" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_token">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_token" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">Login fail</InArgument>
+                      <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">[in_api]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_token">[in_token]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <Throw Exception="[New BusinessRuleException(&quot;Login fail&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="687e92a7-4761-4ad8-b20b-dbe8ac8e9f33" CvTextArea="1125, 214, 171, 24" CvTextArgument="Welcome back," CvType="Text" DesignTimeRectangle="1128, 208, 169, 33" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Welcome back,'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='SPAN' type='' class='salutation' aaname='Welcome back,' check:innerText='Welcome back,' /&gt;" Guid="225ff097-60f5-4a24-88c1-a6e4cb869569" InformativeScreenshot="93c6b34569757ba0136354c58c96d115.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="687e92a7-4761-4ad8-b20b-dbe8ac8e9f33" CvTextArea="1125, 214, 171, 24" CvTextArgument="Welcome back," CvType="Text" DesignTimeRectangle="1128, 208, 169, 33" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Welcome back,'" FullSelectorArgument="&lt;webctrl parentid='main-content' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='main-content' tag='SPAN' type='' class='salutation' aaname='Welcome back,' check:innerText='Welcome back,' /&gt;" Guid="225ff097-60f5-4a24-88c1-a6e4cb869569" InformativeScreenshot="93c6b34569757ba0136354c58c96d115.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
           </Sequence>

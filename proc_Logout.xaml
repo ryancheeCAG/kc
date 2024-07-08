@@ -106,19 +106,19 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="proc_Logout" sap:VirtualizedContainerService.HintSize="546,948" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="proc_Logout" sap:VirtualizedContainerService.HintSize="546,950" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Home" sap:VirtualizedContainerService.HintSize="484,837" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="534c5395-90e7-431d-b48f-160359da7eec" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Home" sap:VirtualizedContainerService.HintSize="484,839" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="534c5395-90e7-431d-b48f-160359da7eec" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,620" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,622" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -126,9 +126,9 @@
             </sap:WorkflowViewStateService.ViewState>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="534c5395-90e7-431d-b48f-160359da7eec" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="68292d09-601e-40f8-8871-61b5d737732f" CvElementArea="3395, 135, 23, 35" CvType="Icon" DesignTimeRectangle="3391, 137, 32, 32" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl name='Kebab32' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl name='Kebab32' tag='svg' type='' class='sls-icon' aaname='' /&gt;" Guid="e201f9a4-79ce-4357-b9e9-d5932749e557" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVFhHY/g/yMCogwiBUQcRAqMOIgQodtCpG1//J3Q9AuP1Rz5CRckHFDvIrfzef+3km2AMYj95/QsqQx6guoMoBRQ7CBRNMEcNiiijNhh1ECEwfB1EaXaHAYodBCoYQblstGDEBdAdRCmgWpSBHARiUwqolqipBUYdRAgMXwcNuoIRlMsGXcEIwqMFIzoAhQiskT9aMNIDjDqIEBh1ECEwyBz0/z8A8OfyMqOygr4AAAAASUVORK5CYII=" InformativeScreenshot="632b08cf23cf1e14485b86ddeeffdc60.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="68292d09-601e-40f8-8871-61b5d737732f" CvElementArea="3395, 135, 23, 35" CvType="Icon" DesignTimeRectangle="3391, 137, 32, 32" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl name='Kebab32' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl name='Kebab32' tag='svg' type='' class='sls-icon' aaname='' /&gt;" Guid="e201f9a4-79ce-4357-b9e9-d5932749e557" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVFhHY/g/yMCogwiBUQcRAqMOIgQodtCpG1//J3Q9AuP1Rz5CRckHFDvIrfzef+3km2AMYj95/QsqQx6guoMoBRQ7CBRNMEcNiiijNhh1ECEwfB1EaXaHAYodBCoYQblstGDEBdAdRCmgWpSBHARiUwqolqipBUYdRAgMXwcNuoIRlMsGXcEIwqMFIzoAhQiskT9aMNIDjDqIEBh1ECEwyBz0/z8A8OfyMqOygr4AAAAASUVORK5CYII=" InformativeScreenshot="632b08cf23cf1e14485b86ddeeffdc60.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="68292d09-601e-40f8-8871-61b5d737732f" CvElementArea="3331, 132, 45, 42" CvType="Icon" DesignTimeRectangle="3323, 129, 60, 48" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='IMG' type='' class='avatar' aaname='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -137,20 +137,14 @@
             </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log out'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="534c5395-90e7-431d-b48f-160359da7eec" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="f3aba308-573a-45b8-9d93-283d70d91d6f" CvElementArea="3155, 412, 151, 53" CvTextArea="3201, 433, 61, 12" CvTextArgument="LOG OUT" CvType="Button" DesignTimeRectangle="3159, 415, 144, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log out'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='' class='cv-button bx--btn bx--btn--primary' aaname='Log out' check:innerText='LOG OUT' /&gt;" Guid="078b710b-7171-4c90-9517-13c067bc2b11" InformativeScreenshot="d4c14b07c64cdb47d7b7e2905e6ceb8a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/home" CVScreenId="f3aba308-573a-45b8-9d93-283d70d91d6f" CvElementArea="3155, 412, 151, 53" CvTextArea="3201, 433, 61, 12" CvTextArgument="LOG OUT" CvType="Button" DesignTimeRectangle="3159, 415, 144, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log out'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='' class='cv-button bx--btn bx--btn--primary' aaname='Log out' check:innerText='LOG OUT' /&gt;" Guid="078b710b-7171-4c90-9517-13c067bc2b11" InformativeScreenshot="d4c14b07c64cdb47d7b7e2905e6ceb8a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Complete" />
               </uix:NClick.Target>
             </uix:NClick>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="proc_Telegram_API - Send message.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="proc_Telegram_API - Send message.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">
-                  <Literal x:TypeArguments="x:String">Logging out</Literal>
-                </InArgument>
-                <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">
-                  <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="in_api" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_token">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_token" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">Logging out</InArgument>
+                <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">[in_api]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_token">[in_token]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
