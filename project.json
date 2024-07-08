@@ -1,5 +1,5 @@
 {
-  "name": "kc",
+  "name": "kc_sls",
   "projectId": "a752e02d-78c2-4c58-a28c-8fba777bf36a",
   "description": "Blank Process",
   "main": "Main.xaml",
@@ -9,13 +9,14 @@
     "UiPath.System.Activities": "[23.10.6]",
     "UiPath.Testing.Activities": "[23.10.1]",
     "UiPath.UIAutomation.Activities": "[23.10.11]",
-    "UiPath.WebAPI.Activities": "[1.21.0]"
+    "UiPath.WebAPI.Activities": "[1.21.0]",
+    "UiPathTeam.Interactive.Activities": "[1.5.6.9]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.6.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
