@@ -1,0 +1,220 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="proc_Open_Browser" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_api" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="in_token" Type="InArgument(x:String)" />
+    <x:Property Name="in_kc_username" Type="InArgument(x:String)" />
+    <x:Property Name="in_kc_pw" Type="InArgument(ss:SecureString)" />
+  </x:Members>
+  <this:proc_Open_Browser.in_api>
+    <InArgument x:TypeArguments="ss:SecureString" />
+  </this:proc_Open_Browser.in_api>
+  <this:proc_Open_Browser.in_token>
+    <InArgument x:TypeArguments="x:String" />
+  </this:proc_Open_Browser.in_token>
+  <this:proc_Open_Browser.in_kc_username>
+    <InArgument x:TypeArguments="x:String" />
+  </this:proc_Open_Browser.in_kc_username>
+  <this:proc_Open_Browser.in_kc_pw>
+    <InArgument x:TypeArguments="ss:SecureString" />
+  </this:proc_Open_Browser.in_kc_pw>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>2655,1710</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>proc_Open_Browser_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="proc_Open_Browser" sap:VirtualizedContainerService.HintSize="1112,1645" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Login" sap:VirtualizedContainerService.HintSize="1050,1534" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="4c42b96d-ad69-49da-96da-b9746a96c4f6" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1317" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Login With SLS'" sap:VirtualizedContainerService.HintSize="954,1202" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4c42b96d-ad69-49da-96da-b9746a96c4f6" Timeout="3" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,985" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login With SLS'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c42b96d-ad69-49da-96da-b9746a96c4f6" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/login" CVScreenId="8c63dad4-a1a7-4e9b-b99d-a4055c6088f0" CvElementArea="2414, 687, 319, 53" CvTextArea="2520, 708, 110, 12" CvTextArgument="LOGIN WITH SLS" CvType="Button" DesignTimeRectangle="2418, 690, 314, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Login With SLS'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='cv-button bx--btn bx--btn--primary button login' aaname='Login With SLS' check:innerText='LOGIN WITH SLS' /&gt;" Guid="22c4ee2b-2b88-4722-b6c1-1f523e542c19" InformativeScreenshot="baf887e4c85183657d8006df0af8a018.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'SLS Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="4c42b96d-ad69-49da-96da-b9746a96c4f6" Text="[in_kc_username]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/login" CVScreenId="7fc4682b-21dd-4141-9731-608cc1ac3708" CvElementArea="2376, 693, 396, 44" CvType="InputBox" DesignTimeRectangle="2379, 695, 392, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT uid-bba9d37d-728d…'" FullSelectorArgument="&lt;webctrl class='bx--text-input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl class='bx--text-input' tag='INPUT' type='text' aaname='' /&gt;" Guid="99d2735d-5878-4dbf-8bc6-ef5f87b06d38" ImageBase64="" InformativeScreenshot="d185fc7e86e45bcf3e4e95ea6fb83aa9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="7fc4682b-21dd-4141-9731-608cc1ac3708" CvTextArea="2378, 670, 97, 13" CvTextArgument="SLS Username" CvType="Text" DesignTimeRectangle="2379, 667, 392, 20" FriendlyName="'SLS Username'" FullSelectorArgument="&lt;webctrl tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DT' type='' class='field-label' aaname='SLS Username' check:innerText='SLS Username' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'SLS Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4c42b96d-ad69-49da-96da-b9746a96c4f6" SecureText="[in_kc_pw]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/login" CVScreenId="7fc4682b-21dd-4141-9731-608cc1ac3708" CvTextArea="2395, 790, 105, 16" CvTextArgument="SLS Password" CvType="Text" DesignTimeRectangle="2379, 779, 392, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT uid-774a93e4-50a2…'" FullSelectorArgument="&lt;webctrl class='bx--text-input' idx='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl class='bx--text-input' type='text' tag='INPUT' aaname='' /&gt;" Guid="1624a159-5156-4293-aa2b-e4f251795283" ImageBase64="" InformativeScreenshot="cf00311a9760294ce9bc4edfb918254b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="7fc4682b-21dd-4141-9731-608cc1ac3708" CvTextArea="2378, 753, 93, 14" CvTextArgument="SLS Password" CvType="Text" DesignTimeRectangle="2379, 751, 392, 20" FriendlyName="'SLS Password'" FullSelectorArgument="&lt;webctrl idx='2' tag='DT' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DT' class='field-label' aaname='SLS Password' check:innerText='SLS Password' /&gt;" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c42b96d-ad69-49da-96da-b9746a96c4f6" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/login" CVScreenId="ce61f82a-6f49-40a5-a126-79c44e1a078b" CvElementArea="2500, 799, 150, 53" CvTextArea="2553, 819, 44, 12" CvTextArgument="LOGIN" CvType="Button" DesignTimeRectangle="2503, 801, 144, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl aaname='Login' aria-role='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Login' aria-role='button' tag='BUTTON' type='' class='cv-button bx--btn bx--btn--primary button login' check:innerText='LOGIN' /&gt;" Guid="e1dbe92d-bf3f-40be-ac0c-4eb817810d4f" InformativeScreenshot="031e3b8f648bef428c78621f91ba8ed2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,358" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="proc_Telegram_API - Send message.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="proc_Telegram_API - Send message.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">SLS page not available</InArgument>
+                      <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">[in_api]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_token">[in_token]</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <Throw Exception="[New BusinessRuleException(&quot;SLS page not available&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://vle.learning.moe.edu.sg/login" CVScreenId="8c63dad4-a1a7-4e9b-b99d-a4055c6088f0" CvElementArea="2414, 687, 319, 53" CvTextArea="2520, 708, 110, 12" CvTextArgument="LOGIN WITH SLS" CvType="Button" DesignTimeRectangle="2418, 690, 314, 48" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Login With SLS'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='cv-button bx--btn bx--btn--primary button login' aaname='Login With SLS' check:innerText='LOGIN WITH SLS' /&gt;" Guid="bb2b1ef0-a8c2-405d-97fa-8d4c8358fe7f" InformativeScreenshot="9f11f7e2b1f9434da09a63f9b0186e80.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 3456, 1408" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABPlBMVEULIz8nK0U3L0kpKkYMIz/gW3DnXXLjXXETJUHTWG7ZWW4RJUA1SWFTZHhOX3QoPlY7TmU3SmIUK0Y4S2NUZXlMXXImO1QgNk++xM7z9fjEy9MMJECVoK3y9PcoPVXDytK9w82nsLvh5eqgqrUsQlqyu8Xf4+ji5uuYo7DX3OLb4OU8T2YrQVnk5+vR1dw/U2m8wsxCVmvJz9a1vcc9UGZIWm/w8vautsEdM01SY3jx8/YZMEu3v8i7wsuvt8JEV2zZ3uQXLkpLXHLv8vUPJkLCyNBvfo9GWG5FV23L0dju8fQRKESQm6mCj55icYSpsbxzgZIVLEe/xs9se43U2N/p6++RnKp+i5sWLUmGkqGeqbXc4OYQJ0MVLUixusTd4eewucNDVmyjrLjp7PDY3eN9ipoOJkESKUQaMUz///9k1SOvAAAACXBIWXMAAAOwAAADsAEnxA+tAAAAB3RJTUUH5AwPDgUx+qXXFgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEFSURBVDhP7Y/XNoNBFIW33oJoYfsTJIgueid6EEFECPLr7f2fwJTDrGXlwgPkuznfnLPXnBmUcVRUlqRKxqiuqS1JXb0E0CCdPzQ2yfw/BJpbWoFgW7uc0dHZFRJVdPdQ0euFGekzjVC/bgwY10TJWIyDCJNDpjFMxkc4alwzxnEPE5MuMMVpIGFv06gNM7Oq/gbmyPkFY5bFJbVxecUFVtfISHTduCGwoRKbLoCgfvaWdUtym9xxAWA3zr19ce/gMHV0zJP0KZlJnJ1fZC9zydQV895PQH+avEbOyk3B1luZA3d58j5ThP+gXvv49Fx8eSXf3j9krPF9Wz+/0lYKWVvLGIBvOAkkc3pLOcIAAAAASUVORK5CYII=" InformativeScreenshot="1771dd0241a8627936292d89829186a3.jpg" Selector="&lt;html app='chrome.exe' title='Login' /&gt;" Title="New Tab" Url="https://vle.learning.moe.edu.sg/login" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
