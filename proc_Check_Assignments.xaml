@@ -188,7 +188,7 @@
                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="proc_Telegram_API - Send message.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="proc_Telegram_API - Send message.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="in_TelegramMessageToSend">
-                              <Literal x:TypeArguments="x:String">There are **unfinished** assignment(s)</Literal>
+                              <Literal x:TypeArguments="x:String">There are *UNFINISHED* assignment(s)</Literal>
                             </InArgument>
                             <InArgument x:TypeArguments="ss:SecureString" x:Key="in_api">
                               <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="in_api" />
